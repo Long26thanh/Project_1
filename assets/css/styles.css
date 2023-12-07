@@ -133,3 +133,27 @@ a {
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
 }
+
+/*============= Header =============*/
+.clients {
+    width: 1110px;
+    margin-top: 122px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients .desc {
+    margin-top: 23px;
+}
+
+.clients .images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
