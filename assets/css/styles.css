@@ -4,6 +4,7 @@
 
 :root {
     --primary-color: #0f1b4c;
+    --second-color: #000339;
 }
 
 html {
@@ -14,7 +15,8 @@ body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
 }
-/* Common */
+
+/* ========== Common ========== */
 a {
     text-decoration: none;
 }
@@ -28,25 +30,30 @@ a {
 
 .btn {
     display: inline-block;
-    min-width: 98px;
-    color: #fff;
+    min-width: 170px;
+    padding: 18px 16px;
     border-radius: 8px;
-    background: var(--primary-color);
+
+    text-align: center;
     font-size: 1.4rem;
     font-weight: 500;
-    padding: 18px 16px;
-    text-align: center;
+
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 .btn:hover {
     opacity: 0.9;
 }
 
-/*============= Header =============*/
+/* ========== Header ========== */
 .header {
+    /* Position */
     position: relative;
-    background: #e6f0ff;
+
     height: 100vh;
+
+    background-color: #e6f0ff;
 }
 
 .navbar {
@@ -57,31 +64,35 @@ a {
 
 .navbar ul {
     display: flex;
-    margin-left: 50px;
-}
-
-.navbar .actions {
-    margin-left: auto;
+    margin-left: 34px;
 }
 
 .navbar ul a {
-    font-weight: 500;
+    padding: 8px 30px;
+
     font-size: 1.4rem;
+    font-weight: 500;
+
     color: #4f5361;
-    padding: 8px 14px;
 }
 
 .navbar ul a:hover {
     text-decoration: underline;
 }
 
+.navbar .actions {
+    margin-left: auto;
+}
+
 .navbar .actions-link {
-    font-weight: 500;
     font-size: 1.4rem;
+    font-weight: 500;
+
     color: var(--primary-color);
 }
 
 .navbar .actions-btn {
+    min-width: 98px;
     padding: 13px;
     margin-left: 18px;
 }
@@ -95,51 +106,55 @@ a {
 }
 
 .hero .sub-title {
-    color: #687690;
     font-size: 1.8rem;
-    font-weight: 500;
     line-height: 1.5;
+    font-weight: 500;
     letter-spacing: 0.01em;
+
+    color: #687690;
 }
 
 .hero .title {
     margin-top: 8px;
-    color: #000336;
-    font-size: 6.3rem;
+
+    font-size: 6.4rem;
+    line-height: 76px; /* 118.75% */
     font-weight: 700;
-    line-height: 118.75%;
+
+    color: var(--second-color);
 }
 
 .hero .desc {
     margin-top: 30px;
-    color: #5a6473;
+
     font-size: 1.8rem;
-    line-height: 1.78;
+    line-height: 1.7778;
     font-weight: 400;
-    line-height: 177.778%;
+
+    color: #5a6473;
 }
 
-.hero-cta {
+.hero .hero-cta {
+    display: inline-block;
     margin-top: 40px;
-    min-width: 170px;
-    color: #fff;
+
     text-align: center;
     font-size: 1.3rem;
     font-weight: 500;
+
+    color: #fff;
 }
 
 .hero-img {
     position: absolute;
+
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
 }
 
-/*============= Header =============*/
+/* ========== Clients ========== */
 .clients {
-    width: 1110px;
     margin-top: 122px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .clients .row {
@@ -148,7 +163,12 @@ a {
 }
 
 .clients .desc {
-    margin-top: 23px;
+    margin-top: 18.15px;
+
+    line-height: 1.25;
+    font-weight: 500;
+
+    color: #7d8589;
 }
 
 .clients .images {
@@ -156,4 +176,95 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
+}
+
+/* ========== Guides ========== */
+.guides {
+    margin-top: 174px;
+}
+
+.guides .sub-title {
+    position: relative;
+
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 600;
+
+    color: var(--second-color);
+}
+
+.guides .sub-title::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
+    content: "";
+
+    width: 41px;
+    height: 4px;
+    margin-top: -10px;
+    border-radius: 12px;
+
+    background-color: var(--second-color);
+}
+
+.guides .desc {
+    width: 450px;
+    max-width: 100%;
+    margin: 20px auto 0;
+
+    text-align: center;
+    line-height: 1.875; /* 187.5% */
+    font-weight: 400;
+
+    color: #5a6473;
+}
+
+.list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.guide-item {
+    margin: 0 70px;
+
+    text-align: center;
+}
+
+.guide-item .title {
+    margin-top: 26px;
+
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.1; /* 110% */
+    font-weight: 500;
+
+    color: #3b3c45;
+}
+
+.guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    color: #0689ff;
+}
+
+.guide-item .arrow-right {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    margin-top: 50px;
+
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    color: #fff;
 }
