@@ -7,6 +7,11 @@
     --second-color: #000339;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -55,11 +60,22 @@ a {
 }
 
 /* ========== Header ========== */
-.header {
+.fixed-header {
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+    padding-top: 26px;
+    background-color: #e6f0ff;
+}
+
+.hero-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* Position */
     position: relative;
 
-    height: 100vh;
+    height: calc(100vh - 90px);
 
     background-color: #e6f0ff;
 }
@@ -67,7 +83,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -107,15 +123,11 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
-}
-
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-size: 1.8rem;
     line-height: 1.5;
     font-weight: 500;
@@ -124,7 +136,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
 
     font-size: 6.4rem;
@@ -134,7 +146,7 @@ a {
     color: var(--second-color);
 }
 
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
 
     font-size: 1.8rem;
@@ -144,7 +156,7 @@ a {
     color: #5a6473;
 }
 
-.hero .hero-cta {
+.hero-wrap .hero-cta {
     display: inline-block;
     margin-top: 40px;
 
@@ -187,6 +199,18 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
+}
+
+.clients .images a {
+    display: flex;
+    align-items: center;
+    height: 91px;
+    padding: 0 41px;
+    border-radius: 12px;
+}
+
+.clients .images a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* ========== Guides ========== */
